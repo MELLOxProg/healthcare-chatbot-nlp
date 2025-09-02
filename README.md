@@ -8,7 +8,6 @@
 
 *An intelligent healthcare chatbot powered by Hugging Face Transformers for domain-specific customer support*
 
-[Installation](#quick-start) • [Usage](#usage) • [Model](#model-architecture) • [Testing](#testing) • [Contributing](#contributing)
 
 </div>
 
