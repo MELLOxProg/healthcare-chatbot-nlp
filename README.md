@@ -5,9 +5,10 @@
 ![Python](https://img.shields.io/badge/python-v3.11+-blue.svg)
 ![Flask](https://img.shields.io/badge/flask-v3.1.0+-green.svg)
 ![Transformers](https://img.shields.io/badge/transformers-v4.51.0+-orange.svg)
+
 *An intelligent healthcare chatbot powered by Hugging Face Transformers for domain-specific customer support*
 
-[Installation](#installation) • [Usage](#usage) • [Model](#model) • [Testing](#testing) • [Contributing](#contributing)
+[Installation](#quick-start) • [Usage](#usage) • [Model](#model-architecture) • [Testing](#testing) • [Contributing](#contributing)
 
 </div>
 
@@ -36,9 +37,12 @@
 
 The Dr. Assist chatbot features a modern, responsive web interface with:
 - Clean design with healthcare branding
+- Sample navigation bar (conceptual - links are non-functional)
 - Floating chat button for easy access
 - Interactive chat window with real-time responses
 - Professional styling using Tailwind CSS
+
+> **Note**: The navigation bar at the top (Home, About, Services) is included for UI concept demonstration only. The links are non-functional as the primary interaction is through the chat interface.
 
 ### How to Use the Interface
 
