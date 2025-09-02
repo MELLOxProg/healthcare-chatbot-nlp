@@ -5,11 +5,9 @@
 ![Python](https://img.shields.io/badge/python-v3.11+-blue.svg)
 ![Flask](https://img.shields.io/badge/flask-v3.1.0+-green.svg)
 ![Transformers](https://img.shields.io/badge/transformers-v4.51.0+-orange.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-
 *An intelligent healthcare chatbot powered by Hugging Face Transformers for domain-specific customer support*
 
-[Demo](#demo) • [Installation](#installation) • [Usage](#usage) • [API](#api) • [Model](#model) • [Contributing](#contributing)
+[Installation](#installation) • [Usage](#usage) • [Model](#model) • [Testing](#testing) • [Contributing](#contributing)
 
 </div>
 
@@ -27,6 +25,28 @@
 - 📊 **Domain-Specific**: Specialized for healthcare queries and support
 - 🔄 **Real-time Chat**: Interactive chat interface with immediate responses
 - 📱 **Responsive Design**: Works seamlessly across devices
+
+---
+
+## 🖼️ Demo
+
+### Web Interface Preview
+
+![Healthcare Chatbot Interface](ss.png)
+
+The Dr. Assist chatbot features a modern, responsive web interface with:
+- Clean design with healthcare branding
+- Floating chat button for easy access
+- Interactive chat window with real-time responses
+- Professional styling using Tailwind CSS
+
+### How to Use the Interface
+
+1. **Launch the application** by running `python main.py`
+2. **Open your browser** to `http://localhost:5000`
+3. **Click the chat button** (💬) located in the bottom-right corner
+4. **Type your healthcare questions** in the chat input field
+5. **Receive instant responses** from the AI-powered Dr. Assist
 
 ---
 
@@ -72,7 +92,7 @@
 
 ## 💻 Usage
 
-### Web Interface
+### How to Interact with the Chatbot
 
 1. **Start the Flask server**
    ```bash
@@ -81,65 +101,63 @@
 
 2. **Open your browser** to `http://localhost:5000`
 
-3. **Click the chat icon** (💬) in the bottom-right corner
+3. **Click the chat button** (💬) located in the **bottom-right corner** of the web page
 
-4. **Start chatting** with Dr. Assist about your healthcare queries
+4. **Type your message** in the chat input field that appears
 
-### Sample Queries
+5. **Click "Send"** or press Enter to get a response from Dr. Assist
 
-Try these example queries to test the chatbot:
+### Example Interaction
 
-- *"What are the symptoms of the flu?"*
-- *"How do I know if I have a fever?"*
-- *"How can I schedule an appointment with my doctor?"*
-- *"I forgot to take my medication. What now?"*
-- *"What happens if I skip a dose of my pills?"*
+Here's how a typical conversation looks:
 
----
+**You**: "What are the symptoms of the flu?"
 
-## 🔌 API Reference
+**🧑‍⚕️ Dr. Assist**: "Common flu symptoms include fever, chills, muscle aches, cough, congestion, runny nose, headaches, and fatigue. If you're experiencing these symptoms, consider contacting your healthcare provider."
 
-### Chat Endpoint
+### Communication Method
 
-**POST** `/chat`
-
-Send a message to the chatbot and receive a response.
-
-#### Request Body
-
-```json
-{
-  "message": "What are the symptoms of the flu?"
-}
-```
-
-#### Response
-
-```json
-{
-  "response": "Common flu symptoms include fever, chills, muscle aches, cough, congestion, runny nose, headaches, and fatigue..."
-}
-```
-
-#### Error Response
-
-```json
-{
-  "error": "Message is required"
-}
-```
-
-### Example cURL Request
-
-```bash
-curl -X POST http://localhost:5000/chat \
-  -H "Content-Type: application/json" \
-  -d '{"message": "How do I schedule an appointment?"}'
-```
+The chatbot is designed for **web-based interaction only**. Users communicate through:
+- The floating chat interface accessible via the chat button
+- Real-time message exchange within the chat window
+- No direct API calls needed for end users
 
 ---
 
-## 🧠 Model Architecture
+## 🧪 Testing
+
+### Sample Questions for Testing
+
+![Sample Questions](questions.png)
+
+The project includes a comprehensive set of test questions in `Questions.md` to help you evaluate the chatbot's performance. These questions are carefully curated to test various aspects of the healthcare domain knowledge.
+
+#### Question Categories
+
+**Common Healthcare Queries:**
+- Symptom identification ("What are the symptoms of the flu?")
+- Medical procedures ("How can I schedule an appointment with my doctor?")
+- Medication management ("I forgot to take my medication. What now?")
+- Health monitoring ("How do I know if I have a fever?")
+
+**Edge Cases for Robustness Testing:**
+- Medication safety scenarios
+- Dosage-related questions
+- Account management queries
+
+#### Using the Test Questions
+
+1. **Navigate to** `Questions.md` in the project root
+2. **Copy any question** from the provided list
+3. **Paste it** into the chat interface
+4. **Evaluate the response** quality and accuracy
+5. **Test edge cases** to ensure robust performance
+
+These test questions help ensure the chatbot provides accurate, helpful responses across various healthcare scenarios while maintaining appropriate boundaries for medical advice.
+
+---
+
+## 🧑‍⚕️ Model Architecture
 
 ### Model Details
 
@@ -349,12 +367,6 @@ Enable detailed logging by setting Flask debug mode:
 ```python
 app.run(debug=True)
 ```
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
